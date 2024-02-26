@@ -1,7 +1,13 @@
 import './App.css';
+import React, { Fragment } from 'react'
 
-export default function Square() {
-
-  return <button className="square">X</button>
-
+function App() {
+  return (
+    <>
+      <button className="square">X</button>
+      <button className="square">X</button>
+    </>
+  )
 }
+
+export default App
