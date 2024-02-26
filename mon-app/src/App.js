@@ -1,13 +1,35 @@
 import './App.css';
-import React, { Fragment } from 'react'
+import { useState } from 'react';
 
-function App() {
+function Square() {
+ const [value, setValue] = useState(null)
+
+  function handleClick() {
+   setValue('O')
+  }
   return (
-    <>
-      <button className="square">X</button>
-      <button className="square">X</button>
-    </>
+     <button className="square"   onClick={handleClick} >{value}</button>
   )
 }
 
-export default App
+export default function Board() {
+  return (
+    <>
+      <div className="board-row">
+        <Square />
+        <Square />
+        <Square />
+      </div>
+      <div className="board-row">
+        <Square />
+        <Square />
+        <Square />
+      </div>
+      <div className="board-row">
+        <Square />
+        <Square />
+        <Square />
+      </div>
+    </>
+  );
+}
